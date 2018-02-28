@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorwhite">#ffffff</color>
+    <color name="colorselect">#FF4081</color>
+    <color name="colorNoselect">#000000</color>
+    <color name="colortheme">#E75B5C</color>
+    <color name="colorxqselect">#f26465</color>
+    <color name="colorxqnoselect">#5b5b5b</color>
+    <color name="msgcenternoselect">#f5c5c5</color>
+    <color name="xiangqing_text_color">#595959</color>
+    <color name="darkgray">#eee</color>
+    <color name="font_333">#333333</color>
+    <color name="c45b5ae">#45b5ae</color>
+    <color name="result_view">#b0000000</color>
+    <color name="cfbfbfb">#fbfbfb</color>
+    <color name="cf4f4f4">#f4f4f4</color>
+
+</resources>

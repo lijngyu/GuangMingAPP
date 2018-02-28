@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="43dp"
+
+    android:background="#ffffff">
+
+    <ImageView
+        android:id="@+id/xiazai_item_tp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:src="@mipmap/png" />
+
+    <TextView
+        android:id="@+id/xiazai_item_dx"
+        style="@style/xiangqing_item_text"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+
+        android:layout_toRightOf="@id/xiazai_item_tp"
+        android:ellipsize="end"
+        android:maxEms="12"
+        android:maxLines="2" />
+
+    <TextView
+        android:id="@+id/wenjian_dx"
+        style="@style/ss_lint_text"
+        android:layout_alignLeft="@id/xiazai_item_dx"
+        android:layout_below="@id/xiazai_item_dx"
+        android:visibility="gone"
+
+        />
+
+    <com.example.litianci.guangming.views.MasterLayout
+        android:id="@+id/xiazai_zx"
+        android:layout_width="39dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="24dp"></com.example.litianci.guangming.views.MasterLayout>
+
+    <ImageButton
+        android:id="@+id/xiazai_iamge_button"
+        android:layout_width="39dp"
+        android:layout_height="17dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="24dp"
+        android:background="@null"
+        android:src="@mipmap/dakai"
+        android:visibility="gone"></ImageButton>
+
+    <TextView
+        android:id="@+id/xiazai_sudu"
+        style="@style/ss_lint_text"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/xiazai_zx"
+        android:layout_toStartOf="@+id/xiazai_zx"
+        android:visibility="gone" />
+</RelativeLayout>

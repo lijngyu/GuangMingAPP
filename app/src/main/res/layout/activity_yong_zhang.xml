@@ -1,0 +1,52 @@
+<!--oa首页-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f4f4"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f4f4"
+        android:orientation="vertical"
+
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="#D75758" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#D75758">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="14dp"
+                android:paddingRight="44dp"
+                android:src="@mipmap/back" />
+
+            <TextView
+                style="@style/shouye_title_text"
+                android:layout_gravity="center"
+                android:text="用章查询" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <com.example.litianci.guangming.pullswipe.PullToRefreshSwipeMenuListView
+        android:id="@+id/gwgl_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#f9f9f9"
+        android:dividerHeight="2dp"></com.example.litianci.guangming.pullswipe.PullToRefreshSwipeMenuListView>
+</LinearLayout>

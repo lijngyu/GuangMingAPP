@@ -1,0 +1,73 @@
+<!--oa首页-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f4f4"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f4f4"
+        android:orientation="vertical"
+
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="#D75758" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#D75758">
+
+
+            <TextView
+                style="@style/shouye_title_text"
+                android:layout_gravity="center"
+                android:text="通知公告" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/search_et_tz"
+                style="@style/ss_lint_text"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/search_edittext_shape"
+                android:drawablePadding="6dp"
+                android:hint="请输入标题"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp" />
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical|right"
+                android:paddingRight="30dp"
+                android:paddingLeft="20dp"
+                android:src="@mipmap/sousuo" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <com.example.litianci.guangming.pullswipe.PullToRefreshSwipeMenuListView
+        android:id="@+id/gwgl_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f5f4f4"
+        android:divider="#f5f4f4"
+        android:dividerHeight="9dp"></com.example.litianci.guangming.pullswipe.PullToRefreshSwipeMenuListView>
+</LinearLayout>

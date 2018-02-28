@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:minEms="4"
+        android:text="王        江："
+        android:textColor="#0069a3"
+        android:textSize="11.5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/banshi_xiangqiang_br"
+        android:orientation="vertical">
+
+        <com.example.litianci.guangming.views.ListViewForScrollView
+            android:id="@+id/lv_recorddetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#00000000"
+            android:dividerHeight="0dip"
+            android:layout_marginBottom="1dp"
+            ></com.example.litianci.guangming.views.ListViewForScrollView>
+
+    </LinearLayout>
+</LinearLayout>

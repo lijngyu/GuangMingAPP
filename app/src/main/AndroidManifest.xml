@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.litianci.guangming">
+
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.call_phone" />
+    <!-- 二维码使用的权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <!-- 添加shared权限 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- ibeancon 需要蓝牙权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 支持个推3.0 电子围栏功能 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 指纹解锁的权限 -->
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <application
+        android:name=".GuideApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait" />
+        <!-- 配置第三方Receiver -->
+        <service
+            android:name=".getuidemo.DemoPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice" />
+        <service android:name=".getuidemo.DemoIntentService" />
+        <!-- 配置第三方Receiver -->
+        <receiver
+            android:name=".PushDemoReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.igexin.sdk.action.${GETUI_APP_ID}" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".home.FileCirculationActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".home.TXLActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".home.DutyActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".home.ScheduleActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".home.LeaveActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".home.YongZhangActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".home.SendDataActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".home.ReceiveDataActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".home.AlreadySendActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".home.CollectionDataActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".home.MeettingSendActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".home.DaibanActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".my.MyFileActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".utils.HelpActivity" />
+        <activity
+            android:name=".notice.NoticeXQActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".my.EditPwdActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".home.FileCirculationXQActivity" />
+        <activity android:name=".home.SQActivity" />
+        <activity android:name=".home.MsgCenterActivity" />
+        <activity android:name=".xiangqing.DataXQActivity" />
+        <activity android:name=".my.UploadHeadActivity" />
+        <activity
+            android:name=".home.MeettingNoticeSearchActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".home.MeettingRoomSearchActivity" />
+        <activity android:name=".home.MeettingMaterialsActivity" />
+        <activity android:name=".xiangqing.DaibanXQActivity" />
+        <activity
+            android:name=".home.CarManageActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".home.CarUseActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".xiangqing.YongZhangXQActivity" />
+        <activity android:name=".xiangqing.LeaveXQActivity" />
+        <activity
+            android:name=".home.SelectPersonActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".xiangqing.MeettingRoomXQActivity" />
+        <activity android:name=".xiangqing.UseCarXQActivity" />
+        <activity android:name=".xiangqing.AllreadysendXQActivity" />
+        <activity
+            android:name=".xiangqing.CarManageXQActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name=".home.NoticeActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".my.MyLeaveActivity" />
+        <activity android:name=".my.MyYongZhangActivity" />
+        <activity
+            android:name=".xiangqing.WorkNoticeXQActivity"
+            android:label="@string/title_activity_work_notice_xq"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

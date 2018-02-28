@@ -62,6 +62,7 @@ public class SelectPersonActivity extends BaseActivity implements TextView.OnEdi
     private StringBuilder ryidstringBuilder = new StringBuilder();
     private String bzf;
     private SelecPersonResult result;
+    private String test="";
     Comparator<Users> comparator = new Comparator<Users>() {
         public int compare(Users s1, Users s2) {
             //先排年龄
